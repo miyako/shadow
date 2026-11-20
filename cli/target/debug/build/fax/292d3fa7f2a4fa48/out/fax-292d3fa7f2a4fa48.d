@@ -1,0 +1,12 @@
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/fax/292d3fa7f2a4fa48/out/fax-292d3fa7f2a4fa48.d: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/maps.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/decoder.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/encoder.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/tiff.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/bitmaps.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/fax/292d3fa7f2a4fa48/out/libfax-292d3fa7f2a4fa48.rlib: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/maps.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/decoder.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/encoder.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/tiff.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/bitmaps.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/fax/292d3fa7f2a4fa48/out/libfax-292d3fa7f2a4fa48.rmeta: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/maps.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/decoder.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/encoder.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/tiff.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/bitmaps.rs
+
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/lib.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/maps.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/decoder.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/encoder.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/tiff.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fax-0.2.7/src/bitmaps.rs:

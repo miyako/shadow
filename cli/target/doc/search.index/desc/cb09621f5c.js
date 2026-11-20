@@ -1,0 +1,1 @@
+rd_("hfastblurCeSaves an image as a PPM file, for testing / debuggingCjSame as gaussian_blur, but allows using different blur \xe2\x80\xa60")

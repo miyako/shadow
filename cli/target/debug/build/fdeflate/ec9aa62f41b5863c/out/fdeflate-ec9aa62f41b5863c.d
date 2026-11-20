@@ -1,0 +1,11 @@
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/fdeflate/ec9aa62f41b5863c/out/fdeflate-ec9aa62f41b5863c.d: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/compress.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/decompress.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/huffman.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/tables.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/fdeflate/ec9aa62f41b5863c/out/libfdeflate-ec9aa62f41b5863c.rlib: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/compress.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/decompress.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/huffman.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/tables.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/fdeflate/ec9aa62f41b5863c/out/libfdeflate-ec9aa62f41b5863c.rmeta: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/compress.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/decompress.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/huffman.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/tables.rs
+
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/lib.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/compress.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/decompress.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/huffman.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/tables.rs:

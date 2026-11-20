@@ -1,0 +1,14 @@
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/c3dd1ad319b4fbb8/out/serde-c3dd1ad319b4fbb8.d: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/623dc7e233f8ee5d/out/private.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/c3dd1ad319b4fbb8/out/libserde-c3dd1ad319b4fbb8.rlib: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/623dc7e233f8ee5d/out/private.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/c3dd1ad319b4fbb8/out/libserde-c3dd1ad319b4fbb8.rmeta: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/623dc7e233f8ee5d/out/private.rs
+
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs:
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/623dc7e233f8ee5d/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/serde/623dc7e233f8ee5d/out

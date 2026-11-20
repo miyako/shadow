@@ -1,0 +1,11 @@
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/v_frame/68682618ed134cdb/out/v_frame-68682618ed134cdb.d: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/frame.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/math.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/pixel.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/plane.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/v_frame/68682618ed134cdb/out/libv_frame-68682618ed134cdb.rlib: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/frame.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/math.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/pixel.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/plane.rs
+
+/Users/miyako/Documents/GitHub/shadow/cli/target/debug/build/v_frame/68682618ed134cdb/out/libv_frame-68682618ed134cdb.rmeta: /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/lib.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/frame.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/math.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/pixel.rs /Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/plane.rs
+
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/lib.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/frame.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/math.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/pixel.rs:
+/Users/miyako/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v_frame-0.3.9/src/plane.rs:
