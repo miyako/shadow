@@ -8,7 +8,6 @@ use image::RgbaImage;
 ///
 /// Pipeline: extract alpha → invert mask → offset inverted mask → intersect with original mask → blur → composite on top
 pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, String> {
-    let (w, h) = input.dimensions();
     let color = params.parse_color()?;
 
     // Expand canvas

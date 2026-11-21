@@ -8,7 +8,7 @@ mod shadow;
 use clap::{Parser, Subcommand};
 use image::ImageFormat;
 use protocol::{write_stderr_error, ShadowType};
-use shadow::{generate, ShadowParams};
+use shadow::ShadowParams;
 use std::process::ExitCode;
 
 /// Shadow CLI — Image shadow generator
@@ -300,7 +300,7 @@ fn handle_generate(
     if stdout_mode {
         // Write image bytes to stdout, suppress JSON protocol (write to stderr)
         let bytes = image_io::encode_to_bytes(&final_img, fmt)?;
-        protocol::write_stdout_bytes(&bytes)?;
+        protocol::write_stdout_bytes(&bytes).map_err(|e| e.to_string())?;
         // Protocol response goes to stderr when using stdout for image
         let resp = protocol::GenerateResponse {
             protocol: protocol::PROTOCOL_VERSION,
@@ -326,7 +326,7 @@ fn handle_generate(
             width: final_img.width(),
             height: final_img.height(),
         };
-        protocol::write_stdout(&resp)?;
+        protocol::write_stdout(&resp).map_err(|e| e.to_string())?;
     }
 
     Ok(())

@@ -1,7 +1,7 @@
 use super::ShadowParams;
 use crate::alpha;
 use crate::composite;
-use image::{Rgba, RgbaImage};
+use image::RgbaImage;
 
 /// Generate a long shadow extending at a fixed angle.
 ///

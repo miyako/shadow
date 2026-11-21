@@ -93,8 +93,6 @@ pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, S
             // shadow_x = src_x + proj_x * proj_dist * factor(src_x, src_y)
             // Simplified: shadow is offset and stretched
 
-            let shadow_factor = 1.0 + proj_dist / 100.0;
-
             // Find what source pixel maps to this output pixel
             // Approximate inverse: shift back
             let src_x = x as f64 - proj_x * proj_dist / 10.0;
