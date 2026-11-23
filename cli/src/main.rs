@@ -1,3 +1,5 @@
+#![allow(dead_code)] // utility functions are tested but not all used in main
+
 mod alpha;
 mod blur;
 mod composite;

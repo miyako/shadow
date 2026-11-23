@@ -9,7 +9,6 @@ use image::RgbaImage;
 /// Pipeline: extract alpha → dilate (slightly) → color flood → minimal offset → tight blur
 /// Contact shadows simulate ambient occlusion with zero offset and tight blur.
 pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, String> {
-    let (w, h) = input.dimensions();
     let color = params.parse_color()?;
 
     // Expand canvas

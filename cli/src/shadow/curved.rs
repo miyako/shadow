@@ -12,6 +12,12 @@ use image::{Rgba, RgbaImage};
 pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, String> {
     let color = params.parse_color()?;
 
+    // Validate edge early
+    match params.edge.as_str() {
+        "top" | "bottom" | "left" | "right" => {}
+        _ => return Err(format!("invalid edge: {} (expected top/bottom/left/right)", params.edge)),
+    }
+
     // Expand canvas
     let expanded = if params.canvas_expand > 0 {
         composite::expand_canvas(input, params.canvas_expand)
@@ -76,7 +82,7 @@ pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, S
         }
         "top" => {
             let bottom = min_y;
-            let top = 0.max(min_y.saturating_sub((curve_depth as u32 * 3)));
+            let top = 0.max(min_y.saturating_sub(curve_depth as u32 * 3));
             let left = min_x;
             let right = max_x;
             for y in (top..bottom).rev() {
@@ -96,7 +102,7 @@ pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, S
         }
         "left" => {
             let right_edge = min_x;
-            let left_edge = 0.max(min_x.saturating_sub((curve_depth as u32 * 3)));
+            let left_edge = 0.max(min_x.saturating_sub(curve_depth as u32 * 3));
             let top = min_y;
             let bottom = max_y;
             for x in (left_edge..right_edge).rev() {

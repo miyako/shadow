@@ -79,10 +79,17 @@ pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, S
     if params.shadow_only {
         Ok(result)
     } else {
-        // For inner shadow, composite above; for all others, beneath
+        // Expand the input to match the shadow canvas size for compositing
+        let expanded_input = if params.canvas_expand > 0 {
+            crate::composite::expand_canvas(input, params.canvas_expand)
+        } else {
+            input.clone()
+        };
+
+        // For inner shadow, composite above (darkening); for all others, beneath
         match params.shadow_type {
-            ShadowType::Inner => Ok(crate::composite::composite_shadow_above(input, &result)),
-            _ => Ok(crate::composite::composite_shadow_beneath(input, &result)),
+            ShadowType::Inner => Ok(crate::composite::composite_shadow_above(&expanded_input, &result)),
+            _ => Ok(crate::composite::composite_shadow_beneath(&expanded_input, &result)),
         }
     }
 }
