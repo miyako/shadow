@@ -1,0 +1,19 @@
+{
+  "name": "shadow",
+  "version": "0.1.0",
+  "description": "Image shadow generator CLI wrapped as a 4D component",
+  "namespace": "Shadow",
+  "cli": "shadow-cli",
+  "language": "rust",
+  "feature": "Image shadow generator",
+  "repository": "miyako/shadow",
+  "license": "MIT",
+  "targets": {
+    "macos-universal": {
+      "architectures": ["arm64", "x86_64"]
+    },
+    "windows-x64": {
+      "architectures": ["x86_64"]
+    }
+  }
+}

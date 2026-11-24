@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "source": {
+    "repository": "miyako/shadow",
+    "tag": "0.1.0",
+    "commit": "<TBD>"
+  },
+  "cli_version": "0.1.0",
+  "targets": {
+    "macos-universal": {
+      "url": "https://github.com/miyako/shadow/releases/download/0.1.0/shadow-cli-macos-universal.zip",
+      "zip_sha256": "<TBD>",
+      "exe_sha256": "<TBD>"
+    },
+    "windows-x64": {
+      "url": "https://github.com/miyako/shadow/releases/download/0.1.0/shadow-cli-windows-x64.zip",
+      "zip_sha256": "<TBD>",
+      "exe_sha256": "<TBD>"
+    }
+  }
+}

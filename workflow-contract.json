@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "development_flow": "THINK/ASK → RUN → Verify → Accept",
+  "ci_workflows": {
+    "ci.yml": {
+      "trigger": "branch_push_or_pr",
+      "publishing": false
+    },
+    "bump-version.yml": {
+      "trigger": "manual_dispatch",
+      "publishing": false
+    },
+    "build.yml": {
+      "trigger": "manual_on_main",
+      "publishing": true
+    }
+  },
+  "acceptance_gate": {
+    "unit_tests": "python3 -m unittest discover -s tests -v",
+    "cli_builds": ["macos-arm64", "macos-x64", "windows-x64"],
+    "lipo_universal": true,
+    "tool4d_compilation": true,
+    "source_host_test": true,
+    "compiled_host_test": true
+  },
+  "timeout_seconds": 30,
+  "synchronous": true
+}

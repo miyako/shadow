@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "cli_version": "0.1.0",
+  "protocol_version": 1,
+  "vectors": [
+    {
+      "id": "version",
+      "args": ["--version"],
+      "exit_code": 0,
+      "stdout_json": {"protocol": 1, "version": "0.1.0"},
+      "stderr": ""
+    },
+    {
+      "id": "capabilities",
+      "args": ["capabilities"],
+      "exit_code": 0,
+      "stdout_json_contains": {
+        "protocol": 1,
+        "capabilities": {
+          "types": ["drop", "contact", "curved", "long", "perspective", "inner"]
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "id": "generate_drop",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "tests/fixtures/expected/drop_default.png", "--type", "drop"],
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": "",
+      "expected_output_exists": true,
+      "expected_width_min": 128
+    },
+    {
+      "id": "generate_contact",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "tests/fixtures/expected/contact_default.png", "--type", "contact"],
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": "",
+      "expected_output_exists": true
+    },
+    {
+      "id": "generate_curved",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "tests/fixtures/expected/curved_default.png", "--type", "curved"],
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": "",
+      "expected_output_exists": true
+    },
+    {
+      "id": "generate_long",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "tests/fixtures/expected/long_default.png", "--type", "long"],
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": "",
+      "expected_output_exists": true
+    },
+    {
+      "id": "generate_perspective",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "tests/fixtures/expected/perspective_default.png", "--type", "perspective"],
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": "",
+      "expected_output_exists": true
+    },
+    {
+      "id": "generate_inner",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "tests/fixtures/expected/inner_default.png", "--type", "inner"],
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": "",
+      "expected_output_exists": true
+    },
+    {
+      "id": "shadow_only",
+      "args": ["shadow-only", "--input", "tests/fixtures/input_alpha_128.png", "--output", "/tmp/shadow_only_contract.png", "--type", "drop"],
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": "",
+      "expected_output_exists": true
+    },
+    {
+      "id": "stdin_input",
+      "args": ["generate", "--input", "-", "--output", "/tmp/stdin_contract.png", "--type", "drop"],
+      "stdin_file": "tests/fixtures/input_alpha_128.png",
+      "exit_code": 0,
+      "stdout_json_contains": {"protocol": 1, "ok": true},
+      "stderr": ""
+    },
+    {
+      "id": "invalid_type",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "/tmp/invalid.png", "--type", "bogus"],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr_json_contains": {"protocol": 1, "error": {"code": "E_ARGS"}}
+    },
+    {
+      "id": "missing_input_file",
+      "args": ["generate", "--input", "/nonexistent.png", "--output", "/tmp/missing.png", "--type", "drop"],
+      "exit_code": 3,
+      "stdout": "",
+      "stderr_json_contains": {"protocol": 1, "error": {"code": "E_IO"}}
+    },
+    {
+      "id": "invalid_opacity",
+      "args": ["generate", "--input", "tests/fixtures/input_alpha_128.png", "--output", "/tmp/invalid.png", "--type", "drop", "--opacity", "2.0"],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr_json_contains": {"protocol": 1, "error": {"code": "E_ARGS"}}
+    },
+    {
+      "id": "selftest",
+      "args": ["selftest"],
+      "exit_code": 0,
+      "stdout_contains": "All selftest checks passed",
+      "stderr": ""
+    }
+  ]
+}

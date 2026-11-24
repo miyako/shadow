@@ -1,0 +1,12 @@
+{
+  "name": "shadow",
+  "version": "0.1.0",
+  "description": "Image shadow generator — Rust CLI wrapped as a 4D component",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miyako/shadow.git"
+  },
+  "keywords": ["4d", "image", "shadow", "rust", "cli"],
+  "author": "miyako"
+}
