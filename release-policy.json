@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "signing": {
+    "macos": {
+      "required": true,
+      "developer_id": "<TBD>",
+      "notarization": true,
+      "stapling": true
+    },
+    "windows": {
+      "required": false,
+      "authenticode": false
+    }
+  },
+  "secrets_required": [
+    "APPLE_DEVELOPER_ID_APPLICATION_CERTIFICATE",
+    "APPLE_DEVELOPER_ID_APPLICATION_PASSWORD",
+    "APPLE_ID",
+    "APPLE_TEAM_ID",
+    "APPLE_NOTARIZATION_APP_PASSWORD",
+    "MACOS_SIGNING_IDENTITY",
+    "GITHUB_TOKEN"
+  ],
+  "release_assets": [
+    "shadow-cli-macos-universal.zip",
+    "shadow-cli-windows-x64.zip"
+  ]
+}

@@ -1,0 +1,21 @@
+# Licenses
+
+## shadow-cli
+MIT License — Copyright (c) 2026 miyako
+
+## Dependencies
+
+### image crate
+MIT License — Copyright (c) image-rs contributors
+
+### fastblur crate
+MIT License — Copyright (c) fastblur contributors
+
+### clap crate
+MIT/Apache-2.0 dual licensed — Copyright (c) clap-rs contributors
+
+### serde crate
+MIT/Apache-2.0 dual licensed — Copyright (c) serde-rs contributors
+
+### serde_json crate
+MIT/Apache-2.0 dual licensed — Copyright (c) serde-rs contributors

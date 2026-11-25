@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "component": "shadow",
+  "namespace": "Shadow",
+  "cases": [
+    {
+      "id": "constructor",
+      "description": "cs.Shadow.Generator.new() returns a non-null object",
+      "call": "cs.Shadow.Generator.new()",
+      "assert": "result#Null"
+    },
+    {
+      "id": "version",
+      "description": "version() returns protocol 1 and version 0.1.0",
+      "method": "version",
+      "assert": "result.ok=True AND result.value.protocol=1 AND result.value.version=\"0.1.0\""
+    },
+    {
+      "id": "capabilities",
+      "description": "capabilities() returns 6 shadow types",
+      "method": "capabilities",
+      "assert": "result.ok=True AND result.value.capabilities.types.length=6"
+    },
+    {
+      "id": "generate_drop",
+      "description": "generate(drop) produces a valid output file",
+      "method": "generate",
+      "args": {"type": "drop", "opacity": 0.5, "blur": 10.0},
+      "assert": "result.ok=True AND result.value.width>0 AND result.value.height>0"
+    },
+    {
+      "id": "generate_contact",
+      "description": "generate(contact) produces a valid output file",
+      "method": "generate",
+      "args": {"type": "contact"},
+      "assert": "result.ok=True"
+    },
+    {
+      "id": "generate_curved",
+      "description": "generate(curved) produces a valid output file",
+      "method": "generate",
+      "args": {"type": "curved", "edge": "bottom"},
+      "assert": "result.ok=True"
+    },
+    {
+      "id": "generate_long",
+      "description": "generate(long) produces a valid output file",
+      "method": "generate",
+      "args": {"type": "long", "angle": 45},
+      "assert": "result.ok=True"
+    },
+    {
+      "id": "generate_perspective",
+      "description": "generate(perspective) produces a valid output file",
+      "method": "generate",
+      "args": {"type": "perspective", "light-z": 100.0},
+      "assert": "result.ok=True"
+    },
+    {
+      "id": "generate_inner",
+      "description": "generate(inner) produces a valid output file",
+      "method": "generate",
+      "args": {"type": "inner"},
+      "assert": "result.ok=True"
+    },
+    {
+      "id": "shadow_only",
+      "description": "shadowOnly() produces shadow-only output",
+      "method": "shadowOnly",
+      "args": {"type": "drop"},
+      "assert": "result.ok=True"
+    },
+    {
+      "id": "blob_stdin",
+      "description": "generate(blob) works with stdin input mode",
+      "method": "generate",
+      "input_type": "blob",
+      "args": {"type": "contact"},
+      "assert": "result.ok=True"
+    },
+    {
+      "id": "error_invalid_type",
+      "description": "Invalid shadow type returns E_ARGS error",
+      "method": "generate",
+      "args": {"type": "bogus"},
+      "assert": "result.ok=False AND result.error.code=\"E_ARGS\""
+    },
+    {
+      "id": "error_missing_input",
+      "description": "Missing input file returns E_IO error",
+      "method": "generate",
+      "input": "/nonexistent.png",
+      "args": {"type": "drop"},
+      "assert": "result.ok=False AND result.error.code=\"E_IO\""
+    },
+    {
+      "id": "error_invalid_opacity",
+      "description": "Opacity > 1.0 returns E_ARGS error",
+      "method": "generate",
+      "args": {"type": "drop", "opacity": 2.0},
+      "assert": "result.ok=False AND result.error.code=\"E_ARGS\""
+    }
+  ]
+}
