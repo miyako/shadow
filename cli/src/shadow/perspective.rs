@@ -50,11 +50,12 @@ pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, S
 
     // Normalise the horizontal light direction to a unit vector so that
     // light_x / light_y express direction, and light_z expresses distance.
+    // The shadow is thrown *opposite* the light, so we negate the direction.
     let dir_len = (lx * lx + ly * ly).sqrt();
     let (dir_x, dir_y) = if dir_len > 0.0001 {
-        (lx / dir_len, ly / dir_len)
+        (-lx / dir_len, -ly / dir_len)
     } else {
-        (0.0, 1.0) // default: light from directly above
+        (0.0, 1.0) // default: shadow straight down
     };
 
     // Projection distance in pixels. `light_z` is in the same units as the
@@ -84,7 +85,7 @@ pub fn generate(input: &RgbaImage, params: &ShadowParams) -> Result<RgbaImage, S
 
             // Scale the projection by how far the pixel is from the light axis:
             // pixels opposite the light are thrown the farthest.
-            let along = -(dx * dir_x + dy * dir_y);
+            let along = dx * dir_x + dy * dir_y;
             // Points on the light axis keep their ground position; points
             // opposite stretch away in proportion to their distance.
             let stretch = 1.0 + (along.abs() / (w.max(h) as f64)) * 1.5;

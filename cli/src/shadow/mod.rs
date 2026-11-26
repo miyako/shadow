@@ -49,9 +49,9 @@ impl Default for ShadowParams {
             fade: "linear".to_string(),
             edge: "bottom".to_string(),
             curve_depth: 20.0,
-            light_x: 0.0,
-            light_y: 0.0,
-            light_z: 100.0,
+            light_x: -1.0,
+            light_y: -1.0,
+            light_z: 40.0,
             canvas_expand: 20,
             shadow_only: false,
         }

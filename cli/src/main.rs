@@ -89,15 +89,15 @@ enum Commands {
         curve_depth: f32,
 
         /// Light X position (for perspective)
-        #[arg(long, default_value_t = 0.0)]
+        #[arg(long, default_value_t = -1.0)]
         light_x: f64,
 
         /// Light Y position (for perspective)
-        #[arg(long, default_value_t = 0.0)]
+        #[arg(long, default_value_t = -1.0)]
         light_y: f64,
 
         /// Light Z elevation (for perspective)
-        #[arg(long, default_value_t = 100.0)]
+        #[arg(long, default_value_t = 40.0)]
         light_z: f64,
 
         /// Canvas expansion in pixels (padding around output)
@@ -146,11 +146,11 @@ enum Commands {
         edge: String,
         #[arg(long, default_value_t = 20.0)]
         curve_depth: f32,
-        #[arg(long, default_value_t = 0.0)]
+        #[arg(long, default_value_t = -1.0)]
         light_x: f64,
-        #[arg(long, default_value_t = 0.0)]
+        #[arg(long, default_value_t = -1.0)]
         light_y: f64,
-        #[arg(long, default_value_t = 100.0)]
+        #[arg(long, default_value_t = 40.0)]
         light_z: f64,
         #[arg(long, default_value_t = 20)]
         canvas_expand: u32,
@@ -240,7 +240,13 @@ fn parse_format(s: &str) -> Result<ImageFormat, String> {
         "png" => Ok(ImageFormat::Png),
         "jpeg" | "jpg" => Ok(ImageFormat::Jpeg),
         "webp" => Ok(ImageFormat::WebP),
-        _ => Err(format!("invalid format: {} (expected png/jpeg/webp)", s)),
+        "bmp" => Ok(ImageFormat::Bmp),
+        "gif" => Ok(ImageFormat::Gif),
+        "tiff" | "tif" => Ok(ImageFormat::Tiff),
+        _ => Err(format!(
+            "invalid format: {} (expected png/jpeg/webp/bmp/gif/tiff)",
+            s
+        )),
     }
 }
 

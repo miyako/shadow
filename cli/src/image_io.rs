@@ -48,8 +48,8 @@ pub fn save_to_file(
             image::ImageFormat::from_extension(ext).unwrap_or(image::ImageFormat::Png)
         }
     };
-    img.save_with_format(path, fmt)
-        .map_err(|e| format!("failed to encode image: {}", e))
+    let bytes = encode_to_bytes(img, fmt)?;
+    std::fs::write(path, bytes).map_err(|e| format!("failed to write file: {}", e))
 }
 
 /// Encode an RGBA image to bytes in the given format.
@@ -58,8 +58,24 @@ pub fn encode_to_bytes(
     format: image::ImageFormat,
 ) -> Result<Vec<u8>, String> {
     let mut buf = std::io::Cursor::new(Vec::new());
-    img.write_to(&mut buf, format)
-        .map_err(|e| format!("failed to encode image: {}", e))?;
+    match format {
+        // JPEG has no alpha channel — flatten onto white before encoding.
+        image::ImageFormat::Jpeg => {
+            let rgb = image::RgbImage::from_fn(img.width(), img.height(), |x, y| {
+                let p = img.get_pixel(x, y).0;
+                // Composite over a white background so transparency is preserved visually.
+                let a = p[3] as f32 / 255.0;
+                let blend = |c: u8| (c as f32 * a + 255.0 * (1.0 - a)).round() as u8;
+                image::Rgb([blend(p[0]), blend(p[1]), blend(p[2])])
+            });
+            rgb.write_to(&mut buf, format)
+                .map_err(|e| format!("failed to encode image: {}", e))?;
+        }
+        _ => {
+            img.write_to(&mut buf, format)
+                .map_err(|e| format!("failed to encode image: {}", e))?;
+        }
+    }
     Ok(buf.into_inner())
 }
 
@@ -135,5 +151,34 @@ mod tests {
         let bytes = encode_to_bytes(&img, image::ImageFormat::Png).unwrap();
         let loaded = load_from_bytes(&bytes).unwrap();
         assert_eq!(loaded.dimensions(), (32, 32));
+    }
+
+    #[test]
+    fn test_encode_jpeg_flattens_transparency() {
+        // JPEG has no alpha channel — encoding must succeed and flatten onto white.
+        let mut img = RgbaImage::new(8, 8);
+        img.put_pixel(4, 4, Rgba([255, 0, 0, 255]));
+        // Fully transparent pixel should come out white after flattening.
+        let bytes = encode_to_bytes(&img, image::ImageFormat::Jpeg).unwrap();
+        assert!(!bytes.is_empty());
+        // JPEG magic bytes
+        assert_eq!(&bytes[0..2], &[0xFF, 0xD8]);
+    }
+
+    #[test]
+    fn test_encode_all_supported_formats() {
+        let img = create_transparent(16, 16);
+        for (fmt, name) in [
+            (image::ImageFormat::Png, "png"),
+            (image::ImageFormat::Jpeg, "jpeg"),
+            (image::ImageFormat::WebP, "webp"),
+            (image::ImageFormat::Bmp, "bmp"),
+            (image::ImageFormat::Gif, "gif"),
+            (image::ImageFormat::Tiff, "tiff"),
+        ] {
+            let bytes = encode_to_bytes(&img, fmt)
+                .unwrap_or_else(|e| panic!("failed to encode {}: {}", name, e));
+            assert!(!bytes.is_empty(), "{} encoding produced no bytes", name);
+        }
     }
 }
