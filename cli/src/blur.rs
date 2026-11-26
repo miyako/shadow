@@ -90,6 +90,16 @@ pub fn gaussian_blur_rgba(img: &RgbaImage, sigma: f32) -> RgbaImage {
     result
 }
 
+/// Apply Gaussian blur to a raw single-channel mask (Vec<u8>).
+pub fn blur_mask(mask: &[u8], width: u32, height: u32, sigma: f32) -> Vec<u8> {
+    if sigma <= 0.0 || mask.is_empty() {
+        return mask.to_vec();
+    }
+    let mut data = mask.to_vec();
+    blur_single_channel(&mut data, width as usize, height as usize, sigma);
+    data
+}
+
 /// Blur a grayscale image in-place wrapper (returns a new image).
 pub fn blur_gray(img: &GrayImage, sigma: f32) -> GrayImage {
     if sigma <= 0.0 {

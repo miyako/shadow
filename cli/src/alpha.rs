@@ -85,6 +85,14 @@ pub fn invert_mask(mask: &[u8]) -> Vec<u8> {
     mask.iter().map(|&v| 255 - v).collect()
 }
 
+/// Element-wise saturating subtraction of two masks: `a - b`, clamped at 0.
+pub fn subtract_masks(a: &[u8], b: &[u8]) -> Vec<u8> {
+    a.iter()
+        .zip(b.iter())
+        .map(|(&va, &vb)| va.saturating_sub(vb))
+        .collect()
+}
+
 /// Element-wise multiply of two masks (alpha multiply / bitwise AND equivalent).
 pub fn multiply_masks(a: &[u8], b: &[u8]) -> Vec<u8> {
     a.iter()
@@ -285,3 +293,4 @@ mod tests {
         assert_eq!(ch, 0);
     }
 }
+

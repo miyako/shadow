@@ -1,0 +1,6 @@
+{
+  "target": "macos-universal",
+  "binary": "shadow-cli",
+  "sha256": "9447cd506b1774e34157e4ac601de64fc46a2d4ccc2721c936cf8f27129d0644",
+  "size_bytes": 12496288
+}
